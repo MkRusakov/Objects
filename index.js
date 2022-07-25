@@ -7,7 +7,20 @@ var chevy = {
     convertible: false,
     mileage: 1021,
     engine: 245,
-    amount: 4.6
+    amount: 4.6,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert(this.make + " "  + this.model + " goes zoom zoom!");
+        } else {
+            alert("You need to start the engine first.");
+        }
+    }
 };
 var cadi = {
     make: "Cadillac",
@@ -18,7 +31,20 @@ var cadi = {
     convertible: false,
     mileage: 12892,
     engine: 245,
-    amount: 4.6 
+    amount: 4.6,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert(this.make + " "  + this.model + " goes zoom zoom!");
+        } else {
+            alert("You need to start the engine first.");
+        }
+    } 
 };
 var taxi = {
     make: "Webville Motors",
@@ -27,7 +53,20 @@ var taxi = {
     color: "yellow",
     passengers: 4,
     convertible: false,
-    mileage: 281341
+    mileage: 281341,
+    start: function() {
+        this.started = true;
+    },
+    stop: function() {
+        this.started = false;
+    },
+    drive: function() {
+        if (this.started) {
+            alert(this.make + " "  + this.model + " goes zoom zoom!");
+        } else {
+            alert("You need to start the engine first.");
+        }
+    }
 };
 function prequal(car) {
     if (car.mileage>10000) {
@@ -91,7 +130,7 @@ var fiat = {
     },
     drive: function() {
         if (this.started) {
-            alert("Zoom Zoom!");
+            alert(this.make + " "  + this.model + " goes zoom zoom!");
         } else {
             alert("You need to start the engine first.");
         }
@@ -116,3 +155,12 @@ eightBall.chake();
 eightBall.chake();
 eightBall.chake();
 console.log (eightBall.look());
+cadi.start();
+cadi.drive();
+cadi.stop();
+chevy.start();
+chevy.drive();
+chevy.stop();
+taxi.start();
+taxi.drive();
+taxi.stop();
