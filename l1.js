@@ -97,7 +97,22 @@ var fiat = {
         }
     }
 };
-fiat.drive();
-fiat.start();
-fiat.drive();
-fiat.stop();
+
+
+var eightBall = {
+    index: 0,
+    advice: ["yes", "no", "maybe", "not a chance"],
+    chake: function() {
+        this.index = this.index + 1;
+        if (this.index>=this.advice.length) {
+            this.index = 0;
+        }
+    },
+    look: function() {
+        return this.advice[this.index];
+    }
+};
+eightBall.chake();
+eightBall.chake();
+eightBall.chake();
+console.log (eightBall.look());
