@@ -164,3 +164,7 @@ chevy.stop();
 taxi.start();
 taxi.drive();
 taxi.stop();
+alert(taxi.color);
+for (var prop in chevy) {
+    console.log(prop + ": " + chevy[prop]);
+}
